@@ -1,0 +1,29 @@
+html
+body {
+    background: #343242;
+    color: #ffffff;
+    height: 100%;
+    margin: 0;
+}
+.tab {
+    background: #2c2b38;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.tab[hidden] {
+    display: none !important;
+}
+.navbutton {
+    background: none;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+.footer {
+    background: #343242;
+}
