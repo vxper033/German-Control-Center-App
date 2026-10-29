@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>German Control Center</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
 </head>
 <body>
-    <header>
-        <h1>German Control Center</h1>
-    </header>
     <div class="tab" id="Map">
         <h2>Map</h2>
+        <div id="leafmap"></div>
     </div>
     <div class="tab" id="Buildings" hidden>
         <h2>Buildings</h2>
@@ -19,12 +23,19 @@
     <div class="tab" id="Callouts" hidden>
         <h2>Callouts</h2>
     </div>
+    <div class="tab" id="Settings" hidden>
+        <h2>Settings</h2>
+        <label id="DarkModeText"><input type="checkbox" id="DarkModeCheck" checked>Dark Mode</label>
+    </div>
+    <script src="js/settings.js"></script>
     <footer class="footer">
         <button class="navbutton" id="NavMapBtn">Map</button>
         <button class="navbutton" id="NavBuildingsBtn">Buildings</button>
         <button class="navbutton" id="NavCalloutsBtn">Callouts</button>
+        <button class="navbutton" id="NavSettingsBtn">Settings</button>
         <button class="navbutton" id="SoonBtn">Cumming soon</button>
     </footer>
     <script src="js/buttons.js"></script>
+    <script src="js/interface.js"></script>
 </body>
 </html>

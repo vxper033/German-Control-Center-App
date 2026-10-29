@@ -1,29 +1,61 @@
-html
-body {
-    background: #343242;
-    color: #ffffff;
-    height: 100%;
-    margin: 0;
+
+/* Light Mode (Standard) */
+:root {
+    --bg: #F3F6FA;
+    --secondary: #DCE5F0;
+    --text: #263238;
+    /* --accent: #263B50; */
 }
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --bg: #282C34;
+    --secondary: #263B50;
+    --text: #E6EAF0;
+    /* --accent: #61AFEF; */
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("Fonts/Inter_18pt-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    height: 100vh;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
 .tab {
-    background: #2c2b38;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 95vh;
 }
+
 .tab[hidden] {
     display: none !important;
 }
+#leafmap {
+    height: 95vh;
+}
 .navbutton {
+    color: var(--text);
     background: none;
-    color: #ffffff;
     border: none;
     cursor: pointer;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    padding-top: 15px;
+    padding: 15px 10px 5px;
 }
+
 .footer {
-    background: #343242;
+    background-color: var(--secondary);
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
