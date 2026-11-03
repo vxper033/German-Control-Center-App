@@ -5,6 +5,7 @@ const MapBtn = document.getElementById("NavMapBtn")
 const BuildingsBtn = document.getElementById("NavBuildingsBtn")
 const CalloutsBtn = document.getElementById("NavCalloutsBtn")
 const SettingsBtn = document.getElementById("NavSettingsBtn")
+const SoonBtn = document.getElementById("SoonBtn")
 const tabs = document.getElementsByClassName("tab")
 MapBtn.addEventListener("click", () => {
     for (const i in tabs) {
@@ -29,6 +30,12 @@ SettingsBtn.addEventListener("click", () => {
         tabs[i].hidden = true
     }
     document.getElementById("Settings").hidden = false
+})
+SoonBtn.addEventListener("click", () => {
+    for (const i in tabs) {
+        tabs[i].hidden = true
+    }
+    document.getElementById("ComingSoon").hidden = false
 })
 
 //idk 
