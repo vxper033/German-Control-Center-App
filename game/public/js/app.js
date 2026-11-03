@@ -31,6 +31,15 @@ SettingsBtn.addEventListener("click", () => {
     document.getElementById("Settings").hidden = false
 })
 
+//idk 
+let Building = false
+let buildarg = {}
+const NewBuildingBtn = document.getElementById("NewBuildingBtn")
+
+NewBuildingBtn.addEventListener("click", () => {
+    Building = true
+})
+
 //leaflet
 var map = L.map('leafmap').setView([51.505, -0.09], 13);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -40,7 +49,10 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 map.locate({ setView: true, maxZoom: 14 });
 map.on('click', function(e) {        
         var popLocation= e.latlng;
-        var marker = L.marker(popLocation).addTo(map)
+        if (Building == true) {
+            var marker = L.marker(popLocation).addTo(map)
+            Building = false
+        }
     });
 
 // DarkMode
