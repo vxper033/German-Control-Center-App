@@ -59,3 +59,204 @@ body {
     align-items: center;
     box-sizing: border-box;
 }
+
+/* ========================================
+   BUILDINGS TAB
+======================================== */
+
+.building-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.building-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+    padding: 18px;
+    border: 1px solid var(--line, #263650);
+    border-radius: 12px;
+
+    background: var(--panel, #121c2e);
+}
+
+.building-info h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+}
+
+.building-info p {
+    margin: 0 0 6px;
+    color: var(--muted, #91a2ba);
+    font-size: 13px;
+}
+
+.building-info small {
+    color: var(--muted, #91a2ba);
+    font-size: 11px;
+}
+
+.building-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.building-button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+
+    background: var(--blue, #4d8dff);
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.building-button:hover {
+    background: #6a9fff;
+}
+
+.building-demolish {
+    padding: 9px 13px;
+    border: 1px solid #753b46;
+    border-radius: 7px;
+
+    background: #351e29;
+    color: #ff9ca8;
+
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.building-demolish:hover {
+    background: #542833;
+}
+
+.building-empty {
+    padding: 25px;
+    border: 1px dashed var(--line, #263650);
+    border-radius: 10px;
+
+    color: var(--muted, #91a2ba);
+    text-align: center;
+}
+
+/* Modal */
+
+.building-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.building-modal[hidden] {
+    display: none;
+}
+
+.building-modal-content {
+    width: 100%;
+    max-width: 420px;
+
+    padding: 25px;
+
+    background: var(--panel, #121c2e);
+    border: 1px solid var(--line, #263650);
+    border-radius: 14px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.building-modal-content h3 {
+    margin: 0 0 22px;
+    font-size: 20px;
+}
+
+.building-modal-content label {
+    display: block;
+    margin: 15px 0 7px;
+
+    color: var(--muted, #91a2ba);
+    font-size: 12px;
+}
+
+.building-modal-content input,
+.building-modal-content select {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid var(--line, #263650);
+    border-radius: 8px;
+
+    background: var(--bg, #0b1120);
+    color: var(--text, #edf3fc);
+
+    font: inherit;
+}
+
+.building-modal-content input:focus,
+.building-modal-content select:focus {
+    outline: 2px solid var(--blue, #4d8dff);
+    outline-offset: 1px;
+}
+
+.building-modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.building-modal-actions button {
+    flex: 1;
+}
+
+.building-cancel {
+    padding: 12px 18px;
+
+    border: 1px solid var(--line, #263650);
+    border-radius: 8px;
+
+    background: transparent;
+    color: var(--text, #edf3fc);
+
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.building-cancel:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .building-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .building-demolish {
+        align-self: flex-end;
+    }
+
+    .building-modal-actions {
+        flex-direction: column;
+    }
+}
