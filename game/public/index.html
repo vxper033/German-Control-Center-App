@@ -18,8 +18,53 @@
         <div id="leafmap"></div>
     </div>
     <div class="tab" id="Buildings" hidden>
-        <h2>Buildings</h2>
+    <h2>Buildings</h2>
+
+    <!-- Liste gebaute Gebäude -->
+    <div id="BuildingList" class="building-list">
     </div>
+
+    <!-- Button unterhalb der Liste -->
+    <div class="building-actions">
+        <button id="NewBuildingBtn" class="building-button">
+            + Neues Gebäude bauen
+        </button>
+    </div>
+
+    <!-- Bauformular oder so -->
+    <div id="BuildingModal" class="building-modal" hidden>
+        <div class="building-modal-content">
+            <h3>Neues Gebäude bauen</h3>
+
+            <label for="BuildingType">Gebäudetyp</label>
+            <select id="BuildingType">
+                <option value="fire_station">Feuerwache</option>
+                <option value="police_station">Polizeiwache</option>
+                <option value="rescue_station">Rettungswache</option>
+                <option value="thw_station">THW-Ortsverband</option>
+                <option value="control_center">Leitstelle</option>
+            </select>
+
+            <label for="BuildingName">Gebäudename</label>
+            <input
+                type="text"
+                id="BuildingName"
+                placeholder="z. B. Feuerwache 1"
+                maxlength="50"
+            >
+
+            <div class="building-modal-actions">
+                <button id="ConfirmBuildingBtn" class="building-button">
+                    Gebäude errichten
+                </button>
+
+                <button id="CancelBuildingBtn" class="building-cancel">
+                    Abbrechen
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="tab" id="Callouts" hidden>
         <h2>Callouts</h2>
     </div>
