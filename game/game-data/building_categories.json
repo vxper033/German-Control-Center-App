@@ -1,0 +1,32 @@
+[
+  {
+    "id": "fire_department",
+    "name": "Feuerwehr",
+    "description": "Feuerwehreinrichtungen für Brandbekämpfung und technische Hilfeleistung.",
+    "enabled": true
+  },
+  {
+    "id": "police",
+    "name": "Polizei",
+    "description": "Polizeieinrichtungen für Gefahrenabwehr und Strafverfolgung.",
+    "enabled": true
+  },
+  {
+    "id": "rescue_service",
+    "name": "Rettungsdienst",
+    "description": "Einrichtungen für medizinische Versorgung und Patiententransport.",
+    "enabled": true
+  },
+  {
+    "id": "thw",
+    "name": "Technisches Hilfswerk",
+    "description": "Einrichtungen für technische Hilfeleistung und Katastrophenschutz.",
+    "enabled": true
+  },
+  {
+    "id": "control_center",
+    "name": "Leitstellen",
+    "description": "Einrichtungen zur Koordination und Verwaltung von Einsatzkräften.",
+    "enabled": true
+  }
+]
