@@ -1,0 +1,16 @@
+[
+    {
+        "id": "volunteer_fire_station",
+        "name": "Freiwillige Feuerwehr",
+        "category": "fire_department",
+        "icon": "placeholder.png",
+        "build_cost": 75000,
+        "enabled": true,
+        "available_expansions": [
+            "youth_fire_brigade",
+            "vehicle_slot_expansion",
+            "storage_expansion"
+        ]
+
+    }
+]
